@@ -1,6 +1,6 @@
 .app {
-  width: 400px;
-  height: 575px;
+  width: 800px;
+  height: 1000px;
   padding: 30px 60px;
   box-sizing: border-box;
   background-color: white;
@@ -67,13 +67,28 @@
   box-shadow: 4px 4px 8px #16314d63;
   background-color: #40558f;
 }
+div.dropnav { opacity: 0.01; max-height: 0px; transition: opacity 1s, max-height 0s 1s; }
+div.navwrapper:hover div.dropnav {  }
+
+
 
 .Inactive {
-  display: none;
+  opacity: 0.01;
+  height: 0;
+  transition: opacity 1s;
+  width: 100%;
+  
 }
 
+
 .Active {
-  display: block;
+  opacity: 1; 
+  max-height: 600px;
+  transition: opacity 1s;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 .Slider{
@@ -92,14 +107,16 @@ vertical-align:middle;
 }
 .Table {
 width: 100%;
-height: 250px;
 vertical-align:middle;
 }
 .ContentTd{
-width: 90%;
-height: 100%;
+width: 100%;
 vertical-align:middle;
 }
 .TrSlide{
 height: 100%;
+}
+.Image {
+  width: 100%;
+  visibility: hidden;
 }

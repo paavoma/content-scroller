@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from '../Slider/Slider.module.css';
+import image from '../../../assets/dog.jpg';
 
 
 class Slide extends Component {
@@ -28,13 +29,15 @@ class Slide extends Component {
                         
 
                         return (
-                            <div className={index === this.props.activeIndex ? "Active" : "Inactive"} key={index}>
-                                <h1>{s}</h1>
+                            
+                            <div className={index === this.props.activeIndex ? "Active" : "Inactive"} key={index} style={{backgroundImage : `url(${s})`}}>
+                                <img className="Image" src={s}></img>
                                 
 
 
 
                             </div>
+                            
                         )
                     }
                     )}

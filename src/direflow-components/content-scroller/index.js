@@ -1,8 +1,10 @@
 import { DireflowComponent } from 'direflow-component';
 import App from './App';
+import image1 from '../../assets/cat.jpg'
+import image2 from '../../assets/dog.jpg'
 
 const direflowProps = {
-  texts: ['testiteksti1', 'testiteksti2', 'testiteksti3'],
+  texts: [image1, image2],
 }
 
 export default DireflowComponent.create({
