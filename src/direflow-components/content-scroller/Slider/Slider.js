@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slide from '../SliderControls/Slide';
 import LeftPointer from '../SliderControls/LeftPointer';
 import RightPointer from '../SliderControls/RightPointer';
-import classes from './Slider.module.css';
+
 
 
 
@@ -14,12 +14,22 @@ class Slider extends Component {
             activeIndex: 0,
             length: ''
         };
+        let interval ="";
     }
-
+    
     componentDidMount() {
         this.setState({
             length: this.props.elements.length
         })
+        this.changeImageOnTimer(8000);
+    }
+
+    changeImageOnTimer(intervalTime){
+        clearInterval(this.interval);
+        this.interval = setInterval(() => {
+            this.changeNextSlide();
+          }, intervalTime);
+          return () => clearInterval(this.interval);
 
     }
 
@@ -35,6 +45,7 @@ class Slider extends Component {
         this.setState({
             activeIndex: index
         });
+        this.changeImageOnTimer(8000);
     }
     changeNextSlide() {
         let length = this.state.length;
@@ -50,12 +61,11 @@ class Slider extends Component {
         this.setState({
             activeIndex: index
         });
+        this.changeImageOnTimer(8000);
+        
     }
 
     render() {
-        console.log(this.props.elements);
-        console.log("Slide length is " + this.state.length)
-        console.log("Slide length is " + this.state.length)
         return (
 
             <div className='app'>

@@ -3,9 +3,7 @@ import App from './App';
 import image1 from '../../assets/cat.jpg'
 import image2 from '../../assets/dog.jpg'
 
-const direflowProps = {
-  texts: [image1, image2],
-}
+
 
 export default DireflowComponent.create({
   component: App,
@@ -13,7 +11,10 @@ export default DireflowComponent.create({
     tagname: 'content-scroller',
     
   },
-  properties: direflowProps,
+  properties : {
+    image1: image1,
+    image2: image2,
+  },
   plugins: [
     {
       name: 'font-loader',

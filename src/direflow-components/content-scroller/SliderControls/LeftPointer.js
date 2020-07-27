@@ -7,9 +7,6 @@ const LeftPointer = (props) => {
         <img src={leftPointerImg}/>
       </div>
     );
-
-
-
 };
 
 
