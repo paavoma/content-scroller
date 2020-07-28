@@ -8,7 +8,7 @@ Usage:
 
 ```html
 <script src="./direflowBundle.js"></script>
-<div class=">
+<div class="containing-div">
 <content-scroller image1="hreftoimage1" image2="hreftoimage2" etc...></content-scroller>
 </div>
 ```
