@@ -13,5 +13,5 @@ Usage:
 </div>
 ```
 Demo gif:
-<br>
-<img src="scroller_animation.gif"/>
+
+> <img src="scroller_animation.gif"/>
