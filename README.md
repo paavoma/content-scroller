@@ -12,5 +12,4 @@ Usage:
 <content-scroller image1="hreftoimage1" image2="hreftoimage2" etc...></content-scroller>
 </div>
 ```
-
-Use this README to describe your Direflow Component
+<img src="scroller_animation.gif"/>
