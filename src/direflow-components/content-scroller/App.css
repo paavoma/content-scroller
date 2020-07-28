@@ -26,13 +26,6 @@
   align-items: center;
 }
 
-.header-image {
-  width: 165px;
-  height: 165px;
-  background: url('https://silind-s3.s3.eu-west-2.amazonaws.com/direflow/logo.svg');
-  background-size: contain;
-}
-
 .header-title {
   font-size: 34px;
   color: #5781C2;
@@ -101,10 +94,6 @@
   border-right:0px;
   vertical-align:middle;
 }
-.leftArrowDiv{
-  height: 100%;
-  width: 100%;
-}
 
 .RightArrowTd {
   box-sizing: border-box;
@@ -147,6 +136,7 @@ height: 100%;
 }
 .Image {
   width: 100%;
+  
   visibility: hidden;
 }
 table {border-collapse: collapse;}

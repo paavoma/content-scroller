@@ -4,23 +4,40 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'direflow-component';
 import styles from './App.css';
 import Slider from './Slider/Slider';
-import image1 from '../../assets/cat.jpg';
-import image2 from '../../assets/dog.jpg';
 
 const App = (props) => {
   
   return (
     <>
       
-        <Slider elements={[props.image1, props.image2]}/>
+        <Slider elements={populateElements(props)}/>
       
     </>
   );
 };
 
+function populateElements(props) {
+  const elementsToIterate = [props.image1, 
+    props.image2, 
+    props.image3, 
+    props.image4, 
+    props.image5];
+  const finalElements = [];
+  elementsToIterate.forEach((e) => {
+    
+    if (e !== "empty"){
+      finalElements.push(e);
+    }
+  });
+  return finalElements;
+}
+
 App.defaultProps = {
-  image1: image1,
-  image2: image2,
+  image1: "empty",
+  image2: "empty",
+  image3: "empty",
+  image4: "empty",
+  image5: "empty",
 }
 
 

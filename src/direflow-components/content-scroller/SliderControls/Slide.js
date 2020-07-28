@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-
+import image1 from "../../../assets/default.png"
 
 class Slide extends Component {
-    constructor(props) {
-        super(props);
-    }
+    
 
     render() {
         return (
@@ -14,7 +12,8 @@ class Slide extends Component {
                         return (
 
                             <div className={index === this.props.activeIndex ? "Active" : "Inactive"} key={index} style={{ backgroundImage: `url(${s})` }}>
-                                <img className="Image" src={s}></img>
+                                <img className="Image" src={s} alt={image1}></img>
+                                
                             </div>
 
                         )

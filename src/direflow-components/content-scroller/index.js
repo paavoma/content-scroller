@@ -1,7 +1,6 @@
 import { DireflowComponent } from 'direflow-component';
 import App from './App';
-import image1 from '../../assets/cat.jpg'
-import image2 from '../../assets/dog.jpg'
+import image1 from '../../assets/default.png'
 
 
 
@@ -13,7 +12,10 @@ export default DireflowComponent.create({
   },
   properties : {
     image1: image1,
-    image2: image2,
+    image2: "empty",
+    image3: "empty",
+    image4: "empty",
+    image5: "empty",
   },
   plugins: [
     {
