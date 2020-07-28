@@ -12,4 +12,5 @@ Usage:
 <content-scroller image1="hreftoimage1" image2="hreftoimage2" etc...></content-scroller>
 </div>
 ```
+Demo gif:
 <img src="scroller_animation.gif"/>
