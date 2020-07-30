@@ -10,7 +10,7 @@ const App = (props) => {
   return (
     <>
       
-        <Slider elements={populateElements(props)}/>
+        <Slider elements={populateElements(props)} visibleDivs={props.visibleDivs}/>
       
     </>
   );
@@ -21,7 +21,14 @@ function populateElements(props) {
     props.image2, 
     props.image3, 
     props.image4, 
-    props.image5];
+    props.image5,
+    props.image6,
+    props.image7, 
+    props.image8, 
+    props.image9, 
+    props.image10,
+    props.image11,
+    props.image12];
   const finalElements = [];
   elementsToIterate.forEach((e) => {
     
@@ -38,6 +45,14 @@ App.defaultProps = {
   image3: "empty",
   image4: "empty",
   image5: "empty",
+  image6: "empty",
+  image7: "empty",
+  image8: "empty",
+  image9: "empty",
+  image10: "empty",
+  image11: "empty",
+  image12: "empty",
+  visibleDivs: "1",
 }
 
 

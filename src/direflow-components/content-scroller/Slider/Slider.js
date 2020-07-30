@@ -14,17 +14,20 @@ class Slider extends Component {
             activeIndex: 0,
             length: ''
         };
-        let interval ="";
+        
     }
     
     componentDidMount() {
         this.setState({
-            length: this.props.elements.length
+            length: this.props.elements.length,
+            
         })
+        
         this.changeImageOnTimer(8000);
     }
 
     changeImageOnTimer(intervalTime){
+        let interval="";
         clearInterval(this.interval);
         this.interval = setInterval(() => {
             this.changeNextSlide();
@@ -37,10 +40,10 @@ class Slider extends Component {
         let index = this.state.activeIndex;
         let length = this.state.length;
         if (index < 1) {
-            index = length - 1;
+            index = length - Number(this.props.visibleDivs);
         }
         else {
-            index--;
+            index=index-Number(this.props.visibleDivs);
         }
         this.setState({
             activeIndex: index
@@ -52,11 +55,11 @@ class Slider extends Component {
         let index = this.state.activeIndex;
 
 
-        if (index === length - 1) {
-            index = 0
+        if (index >= length-Number(this.props.visibleDivs) || index === length - Number(this.props.visibleDivs)) {
+            index = 0;
         }
-        else {
-            index++;
+        else{
+            index = index+Number(this.props.visibleDivs);
         }
         this.setState({
             activeIndex: index
@@ -80,10 +83,11 @@ class Slider extends Component {
                                 />
                             </td>
                             <td className='ContentTd'>
-                                <div className='slider-text'>
+                                <div className='SlideContent'>
                                     <Slide
                                         activeIndex={this.state.activeIndex}
                                         elements={this.props.elements}
+                                        visibleDivs={this.props.visibleDivs}
                                     />
                                 </div>
                             </td>
