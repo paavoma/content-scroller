@@ -17,3 +17,4 @@ visibleDivs will change the amount of images shown next each other. Supports val
 Demo gif:
 
 > <img src="scroller_animation.gif"/>
+> <img src="content_scroller_demo.JPG"/>
