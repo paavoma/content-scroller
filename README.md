@@ -5,9 +5,10 @@ This component was bootstrapped with [Direflow](https://direflow.io).
 Define containing div's width, images will scale to that width. For best performance use images that have the same aspect ratio
 
 Usage:
+Copy the .js file in the build folder and use it like this ->
 
 ```html
-<script src="./direflowBundle.js"></script>
+<script src="./contentScroller.js"></script>
 <div class="containing-div">
 <content-scroller visibleDivs="2" image1="hreftoimage1" image2="hreftoimage2" etc...></content-scroller>
 </div>
