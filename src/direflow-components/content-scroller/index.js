@@ -1,11 +1,7 @@
 import { DireflowComponent } from 'direflow-component';
 import App from './App';
 import image1 from '../../assets/default.png';
-import image2 from '../../assets/cat.jpg';
-import image3 from '../../assets/cat2.jpg';
-import image4 from '../../assets/dog.jpg';
-import image5 from '../../assets/dog2.jpg';
-import image6 from '../../assets/sea.jpg';
+
 
 export default DireflowComponent.create({
   component: App,

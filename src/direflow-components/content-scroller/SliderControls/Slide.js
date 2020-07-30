@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import image1 from "../../../assets/default.png"
-import { act } from 'react-test-renderer';
 
 class Slide extends Component {
     
