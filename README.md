@@ -13,6 +13,7 @@ Usage:
 </div>
 ```
 visibleDivs will change the amount of images shown next each other. Supports values 1-3.
+
 Demo gif:
 
 > <img src="scroller_animation.gif"/>
