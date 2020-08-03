@@ -73,7 +73,7 @@ class Slider extends Component {
 
             <div className='app'>
 
-                <div className='slider-items'>
+                <div className='SliderItems'>
                     <table>
                     <tbody className='Table'>
                         <tr className='TrSlide'>

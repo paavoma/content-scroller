@@ -18,7 +18,7 @@ class Slide extends Component {
                             return (
                             
                                 <div className={index === this.props.activeIndex ? "ActiveOneDiv" : "Inactive"} key={index} style={{ backgroundImage: `url(${s})` }}>
-                                    <img className="Image" src={s} alt={image1}></img>
+                                    <img className="ScrollerImage" src={s} alt={image1}></img>
                                     
                                 </div>
     
@@ -26,21 +26,21 @@ class Slide extends Component {
                             case "2":
                             return (
                                 <div className={index === this.props.activeIndex ? "ActiveTwoDivs" : "Inactive"  && index === this.props.activeIndex+1 ? "ActiveTwoDivs" : "Inactive"} key={index} style={{ backgroundImage: `url(${s})` }}>
-                                    <img className="Image" src={s} alt={image1}></img>
+                                    <img className="ScrollerImage" src={s} alt={image1}></img>
                                     
                                 </div>
                             );
                             case "3":
                             return (
                                 <div className={index === this.props.activeIndex ? "ActiveThreeDivs" : "Inactive" && index === this.props.activeIndex+1 ? "ActiveThreeDivs" : "Inactive" && index === this.props.activeIndex+2 ? "ActiveThreeDivs" : "Inactive"} key={index} style={{ backgroundImage: `url(${s})` }}>
-                                    <img className="Image" src={s} alt={image1}></img>
+                                    <img className="ScrollerImage" src={s} alt={image1}></img>
                                     
                                 </div>
                             );
                             default:
                             return (
                                 <div className={index === this.props.activeIndex ? "ActiveOneDiv" : "Inactive"} key={index} style={{ backgroundImage: `url(${s})` }}>
-                                    <img className="Image" src={s} alt={image1}></img>
+                                    <img className="ScrollerImage" src={s} alt={image1}></img>
                                     
                                 </div>
                             );
