@@ -1,9 +1,12 @@
+.MainSlider {
+  width: 100%;
+  height: auto;
+}
 .app {
-  
+  width: 100%;
+  height:100%;
   padding: 0;
-  box-sizing: border-box;
   background-color: white;
-  box-shadow: 0 4px 14px 4px #375c821c;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -12,41 +15,65 @@
   height: 0;
   transition: opacity 1s;
   width: 100%;
-  
-  
+  display:none;
 }
 
 
 .ActiveOneDiv {
-  opacity: 1; 
+  opacity: 1;
+  width:98%; 
   max-width:100%;
   
   transition: opacity 2s;
-  width: 100%;
+  
+  
   background-repeat: no-repeat;
   background-size: cover;
   float: left;
+  border: 2px solid #e7e7e7;
 }
 .ActiveTwoDivs {
-  opacity: 1; 
-  max-width:50%;
-  
+  opacity: 1;
+  width: 48%; 
+  max-width:49%;
+
   transition: opacity 2s;
-  width: 100%;
+  
+  
   background-repeat: no-repeat;
   background-size: cover;
   float: left;
+
+  border: 2px solid #e7e7e7;
 }
 .ActiveThreeDivs {
   opacity: 1; 
-  max-width:33%;
+  width:33.33%;
+  max-width:33.33%;
   
   transition: opacity 2s;
-  width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center center;
   float: left;
+  box-sizing: border-box;
+  border: 2px solid #e7e7e7;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
+  
+  
 }
+
+.ActiveDivParent {
+  display:flex;
+  justify-content: space-evenly;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  
+  height:100%;
+}
+
 
 .Slider{
   display: flex;
@@ -54,38 +81,30 @@
 }
 
 .LeftArrowTd {
-  box-sizing: border-box;
-  transition-duration: 0.4s;
-  border: 2px solid #e7e7e7;
+  
+  transition-duration: 0.4s; 
   border-right:0px;
   vertical-align:middle;
 }
 
 .RightArrowTd {
-  box-sizing: border-box;
-  transition-duration: 0.4s;
-  border: 2px solid #e7e7e7;
+  
+  transition-duration: 0.4s; 
   border-left:0px;
   vertical-align:middle;
 }
 
 .ContentTd{
-  box-sizing: border-box;
-border-top: 2px solid #e7e7e7;
-border-bottom: 2px solid #e7e7e7;
+
 width: 100%;
 vertical-align:middle;
+
 }
 
-.LeftArrowTd:hover {
-  background-color: #e7e7e7;
-}
 .LeftArrowTd:active{
  background-color: darkgray;
 }
-.RightArrowTd:hover {
-  background-color: #e7e7e7;
-}
+
 .RightArrowTd:active{
   background-color: darkgray;
  }
@@ -100,20 +119,43 @@ vertical-align:middle;
 
 .SliderItems > table {
   border-collapse: collapse;
+  height:100%;
 }
 
 .TrSlide > td {
   padding: 0px;
+  vertical-align: middle;
+  
 }
 
 .TrSlide{
-height: 100%;
+
+vertical-align: middle;
+}
+.DivImageContainer{
+  height:100%;
+  display:table-cell;
+  vertical-align: middle;
+  margin:auto;
+  
 }
 .ScrollerImage {
-  width: 100%;
   
-  visibility: hidden;
- 
+  display:block;
+  width: 100%;
+  height:100%;
+  
+  
+  object-fit: contain;
 }
 
-
+.DivLink{
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  
+}

@@ -9,9 +9,9 @@ const App = (props) => {
   
   return (
     <>
-      
+        <div className="MainSlider">
         <Slider elements={populateElements(props)} visibleDivs={props.visibleDivs}/>
-      
+        </div>
     </>
   );
 };
@@ -36,8 +36,34 @@ function populateElements(props) {
       finalElements.push(e);
     }
   });
-  return finalElements;
+
+  const elementLinksToIterate = [props.imageLink1, 
+    props.imageLink2, 
+    props.imageLink3, 
+    props.imageLink4, 
+    props.imageLink5,
+    props.imageLink6,
+    props.imageLink7, 
+    props.imageLink8, 
+    props.imageLink9, 
+    props.imageLink10,
+    props.imageLink11,
+    props.imageLink12];
+  const finalElementLinks = [];
+  elementLinksToIterate.forEach((e) => {
+    
+    if (e !== "#"){
+      finalElementLinks.push(e);
+    }
+  });
+  const finalProps = [
+    finalElements,
+    finalElementLinks
+  ]
+
+  return finalProps;
 }
+
 
 App.defaultProps = {
   image1: "empty",
@@ -52,6 +78,18 @@ App.defaultProps = {
   image10: "empty",
   image11: "empty",
   image12: "empty",
+  imageLink1: "#",
+  imageLink2: "#",
+  imageLink3: "#",
+  imageLink4: "#",
+  imageLink5: "#",
+  imageLink6: "#",
+  imageLink7: "#",
+  imageLink8: "#",
+  imageLink9: "#",
+  imageLink10: "#",
+  imageLink11: "#",
+  imageLink12: "#",
   visibleDivs: "1",
 }
 
@@ -59,6 +97,28 @@ App.defaultProps = {
 App.propTypes = {
   image1: PropTypes.string,
   image2: PropTypes.string,
+  image3: PropTypes.string,
+  image4: PropTypes.string,
+  image5: PropTypes.string,
+  image6: PropTypes.string,
+  image7: PropTypes.string,
+  image8: PropTypes.string,
+  image9: PropTypes.string,
+  image10: PropTypes.string,
+  image11: PropTypes.string,
+  image12: PropTypes.string,
+  imageLink1: PropTypes.string,
+  imageLink2: PropTypes.string,
+  imageLink3: PropTypes.string,
+  imageLink4: PropTypes.string,
+  imageLink5: PropTypes.string,
+  imageLink6: PropTypes.string,
+  imageLink7: PropTypes.string,
+  imageLink8: PropTypes.string,
+  imageLink9: PropTypes.string,
+  imageLink10: PropTypes.string,
+  imageLink11: PropTypes.string,
+  imageLink12: PropTypes.string,
   componentTitle: PropTypes.string,
   sampleList: PropTypes.array,
 };

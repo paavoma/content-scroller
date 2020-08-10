@@ -19,15 +19,14 @@ class Slider extends Component {
     
     componentDidMount() {
         this.setState({
-            length: this.props.elements.length,
+            length: this.props.elements[0].length,
             
         })
         
-        this.changeImageOnTimer(8000);
+        
     }
 
     changeImageOnTimer(intervalTime){
-        let interval="";
         clearInterval(this.interval);
         this.interval = setInterval(() => {
             this.changeNextSlide();
@@ -38,12 +37,16 @@ class Slider extends Component {
 
     changePrevSlide() {
         let index = this.state.activeIndex;
-        let length = this.state.length;
-        if (index < 1) {
-            index = length - Number(this.props.visibleDivs);
+        const length = this.state.length;
+        const visibleDivs = Number(this.props.visibleDivs);
+        if (index < visibleDivs) {
+            if (length % visibleDivs === 0)
+            index =0;
+            else 
+            index = length - (length % visibleDivs);
         }
         else {
-            index=index-Number(this.props.visibleDivs);
+            index=index-visibleDivs;
         }
         this.setState({
             activeIndex: index
@@ -53,13 +56,13 @@ class Slider extends Component {
     changeNextSlide() {
         let length = this.state.length;
         let index = this.state.activeIndex;
+        const visibleDivs = Number(this.props.visibleDivs);
 
-
-        if (index >= length-Number(this.props.visibleDivs) || index === length - Number(this.props.visibleDivs)) {
+        if (index >= length-visibleDivs) {
             index = 0;
         }
         else{
-            index = index+Number(this.props.visibleDivs);
+            index = index+visibleDivs;
         }
         this.setState({
             activeIndex: index
@@ -69,8 +72,9 @@ class Slider extends Component {
     }
 
     render() {
+        this.changeImageOnTimer(8000);
         return (
-
+            
             <div className='app'>
 
                 <div className='SliderItems'>
