@@ -29,13 +29,7 @@ function populateElements(props) {
     props.image10,
     props.image11,
     props.image12];
-  const finalElements = [];
-  elementsToIterate.forEach((e) => {
-    
-    if (e !== "empty"){
-      finalElements.push(e);
-    }
-  });
+  let finalElements = [];
 
   const elementLinksToIterate = [props.imageLink1, 
     props.imageLink2, 
@@ -49,13 +43,17 @@ function populateElements(props) {
     props.imageLink10,
     props.imageLink11,
     props.imageLink12];
-  const finalElementLinks = [];
-  elementLinksToIterate.forEach((e) => {
+  let finalElementLinks = [];
+  let index = 0;
+  elementsToIterate.forEach((e) => {
     
-    if (e !== "#"){
-      finalElementLinks.push(e);
+    if (e !== "empty"){
+      finalElements.push(e);
+      finalElementLinks.push(elementLinksToIterate[index]);
     }
+    index++;
   });
+
   const finalProps = [
     finalElements,
     finalElementLinks
@@ -78,18 +76,18 @@ App.defaultProps = {
   image10: "empty",
   image11: "empty",
   image12: "empty",
-  imageLink1: "#",
-  imageLink2: "#",
-  imageLink3: "#",
-  imageLink4: "#",
-  imageLink5: "#",
-  imageLink6: "#",
-  imageLink7: "#",
-  imageLink8: "#",
-  imageLink9: "#",
-  imageLink10: "#",
-  imageLink11: "#",
-  imageLink12: "#",
+  imageLink1: "#!",
+  imageLink2: "#!",
+  imageLink3: "#!",
+  imageLink4: "#!",
+  imageLink5: "#!",
+  imageLink6: "#!",
+  imageLink7: "#!",
+  imageLink8: "#!",
+  imageLink9: "#!",
+  imageLink10: "#!",
+  imageLink11: "#!",
+  imageLink12: "#!",
   visibleDivs: "1",
 }
 
