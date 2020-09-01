@@ -14,42 +14,48 @@
   height: 0;
   transition: opacity 1s;
   width: 100%;
+  
   display:none;
 }
 
 
 .ActiveOneDiv {
   opacity: 1;
-  width:98%; 
+  width:100%; 
   max-width:100%;
-  
+  padding:20px;
   transition: opacity 2s;
-  
-  
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center center;
   float: left;
+  box-sizing: border-box;
   border: 2px solid #e7e7e7;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
 }
 .ActiveTwoDivs {
-  opacity: 1;
-  width: 48%; 
-  max-width:49%;
-
+  opacity: 1; 
+  width:50%;
+  max-width:50%;
+  padding:20px;
   transition: opacity 2s;
-  
-  
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: center center;
   float: left;
-
+  box-sizing: border-box;
   border: 2px solid #e7e7e7;
+  justify-content: center;
+  align-items:center;
+  text-align:center;
 }
 .ActiveThreeDivs {
   opacity: 1; 
   width:33.33%;
   max-width:33.33%;
-  
+  padding:20px;
   transition: opacity 2s;
   background-repeat: no-repeat;
   background-size: 100% 100%;

@@ -19,20 +19,23 @@ class Slide extends Component {
                             
                                 <div className={index === this.props.activeIndex ? "ActiveOneDiv" : "Inactive"} key={index}>
                                     
+                                    <div className="DivImageContainer">
                                     <a classname="DivLink" href={this.props.elements[1][index]}>
                                     <img className="ScrollerImage" src={s} alt={image1}></img>
                                     </a>
-                                    
+                                    </div>
                                 </div>
     
                             );
                             case "2":
                             return (
-                                <div className={index === this.props.activeIndex ? "ActiveTwoDivs" : "Inactive"  && index === this.props.activeIndex+1 ? "ActiveTwoDivs" : "Inactive"} key={index}>
+                                <div className={index === this.props.activeIndex ? "ActiveTwoDivs" : "Inactive"  && 
+                                                index === this.props.activeIndex+1 ? "ActiveTwoDivs" : "Inactive"} key={index}>
+                                    <div className="DivImageContainer">
                                     <a classname="DivLink" href={this.props.elements[1][index]}>
                                     <img className="ScrollerImage" src={s} alt={image1}></img>
                                     </a>
-                                    
+                                    </div>
                                 </div>
                             );
                             case "3":
